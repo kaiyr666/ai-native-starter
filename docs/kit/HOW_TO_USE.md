@@ -6,7 +6,7 @@ You set scope, approve and judge; Claude Code builds; Codex checks. Total attent
 
 | Time | You type | What happens | What you do |
 |---|---|---|---|
-| 0:00 | `/spec` + paste the brief | Claude asks a few questions, then writes the spec and a plan of 3 to 5 slices | Answer the questions. **Read and edit `docs/SPEC.md` and `docs/PLAN.md`**: right problem? realistic scope? |
+| 0:00 | Paste the brief into `docs/BRIEF.md` and save, then `/spec` | Claude asks a few questions, then writes the spec and a plan of 3 to 5 slices | Answer the questions. **Read and edit `docs/SPEC.md` and `docs/PLAN.md`**: right problem? realistic scope? |
 | 0:35 | `/codex-review plan` | Codex critiques the plan | Choose which points to act on |
 | 0:45 | `/slice` | Claude builds one slice, tests it, commits, pushes to GitHub, stops | Look at the result (2 to 3 minutes). Say "next" or what to fix |
 | … | `/slice` (repeat) | Same for each slice | Same. Type `/clear` between slices to give Claude a fresh start; the plan lives in files, so nothing is lost |
@@ -22,6 +22,9 @@ You set scope, approve and judge; Claude Code builds; Codex checks. Total attent
 - **After every slice:** the work is pushed to GitHub, so it is backed up and its history shows how the build progressed.
 - **On every push to GitHub:** CI runs formatting, lint, tests, the eval and a secret scan.
 
+## Why the brief goes in a file
+Text typed after a command cannot contain links, code formatting or bold, and real briefs usually do. Saving it in `docs/BRIEF.md` avoids that, and keeps a record of exactly what was asked.
+
 ## Good habits
 - **Edit the spec, don't just approve it.** Fifteen minutes there saves an hour later.
 - **If Claude asks a question, it is because the spec is unclear.** Answer it, and add the answer to the spec.
@@ -32,7 +35,7 @@ You set scope, approve and judge; Claude Code builds; Codex checks. Total attent
 | Command | Use it to |
 |---|---|
 | `/setup` | Prepare a freshly cloned project |
-| `/spec` | Turn the brief into a spec and plan |
+| `/spec` | Turn the brief in `docs/BRIEF.md` into a spec and plan |
 | `/slice` | Build the next slice (or `/slice 3` for a specific one) |
 | `/codex-review` | Independent review: `plan`, empty for new work, or `all` |
 | `/eval` | Measure quality and update `docs/EVAL.md` |
