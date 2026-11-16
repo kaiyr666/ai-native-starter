@@ -14,7 +14,7 @@
 3. Build one slice from `docs/PLAN.md` at a time. A slice is a small piece that works end to end and can be shown.
 4. Each real design choice goes in `docs/DECISIONS.md`: what we chose, the alternative, and why it lost.
 5. Log in `docs/AI_WORKFLOW.md` anything notable: what was delegated, what a review flagged, what the human overruled.
-6. After each slice: commit, report what was built and the test results, then stop and wait.
+6. After each slice: commit, push to GitHub, report what was built and the test results, then stop and wait.
 
 ## Engineering rules
 - **Simplest thing that works.** No extra features, layers or libraries. Put "with more time" ideas in the README's next steps instead of building them.
@@ -32,7 +32,7 @@
 - [ ] `docs/PLAN.md` ticked, `docs/DECISIONS.md` updated if a choice was made
 - [ ] Known limitations added to "Where it breaks" in `README.md`
 - [ ] If the slice touches anything the eval measures, `/eval` re-run
-- [ ] One commit: `slice N: <what it does>`
+- [ ] One commit: `slice N: <what it does>`, pushed with `git push`
 
 ## Commands
 `/setup` first-time setup · `/spec` brief → spec and plan · `/slice` build the next slice · `/codex-review` independent review by Codex · `/eval` measure quality · `/wrapup` final README and release

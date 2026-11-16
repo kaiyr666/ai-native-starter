@@ -11,4 +11,5 @@ Set up this project so the user can start building. Explain each step in one pla
 3. If `.env` does not exist, run `cp .env.example .env`. Then tell the user: "Open `.env` in your editor and paste your API key after `ANTHROPIC_API_KEY=` (or the OpenAI one). I deliberately can't see that file." Never read or print `.env` yourself.
 4. Create the review baseline so Codex can later review only new work: run `git branch -f reviewed HEAD`.
 5. Run `uv run pytest -q` and `uv run ruff check .`. Both should pass on a fresh kit.
-6. Report: what is ready, anything that failed and how to fix it, and the next step: "Paste the brief and run `/spec`."
+6. Check GitHub is connected: `git remote -v` must show the project's GitHub URL, and `git push` must succeed. If the push asks for a password or fails, stop and point the user to section 2 of `docs/kit/SETUP.md` (GitHub sign-in).
+7. Report: what is ready, anything that failed and how to fix it, and the next step: "Paste the brief and run `/spec`."

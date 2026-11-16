@@ -12,10 +12,12 @@
       "Bash(git commit:*)",
       "Bash(git branch:*)",
       "Bash(git tag:*)",
+      "Bash(git push:*)",
       "Bash(codex exec:*)",
       "Bash(codex login status:*)",
       "Bash(mkdir:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(git remote -v:*)"
     ],
     "deny": [
       "Read(./.env)",

@@ -13,4 +13,5 @@ Prepare the repo for the people who will review it. They will read the README fi
 4. **Check consistency:** README, `docs/SPEC.md`, `docs/DECISIONS.md` and the code agree. Every limitation found in reviews is either fixed or listed.
 5. **Check hygiene:** no secrets, no `.env`, no large data files, no leftover debug code or commented-out blocks, and `.env.example` lists every variable the code reads.
 6. **Commit** `wrapup: final docs` and tag `git tag v1.0`.
-7. **Report** a checklist of what the reviewer will see, and remind the user to push: `git push && git push --tags`.
+7. **Push:** `git push && git push --tags`.
+8. **Report** a checklist of what the reviewer will see, and ask the user to open the repo on GitHub and check the CI tick is green.

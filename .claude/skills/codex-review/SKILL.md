@@ -31,7 +31,7 @@ If `codex` is not logged in or not installed, tell the user to run `codex login`
 3. Ask which findings to fix.
 
 ## 3. After the user decides
-- Fix the chosen findings, run the checks, commit: `review NN: fix <summary>`.
+- Fix the chosen findings, run the checks, commit `review NN: fix <summary>` and `git push`.
 - Add findings not fixed to "Where it breaks" or "Next steps" in `README.md`.
 - Add one line to `docs/AI_WORKFLOW.md`: number of findings, what was fixed, what was rejected and why.
 - For code reviews (not `plan`), move the baseline: `git branch -f reviewed HEAD`.
